@@ -8,13 +8,13 @@ up:
 	else \
 		cp .env .env.merged; \
 	fi
-	docker-compose --env-file .env.merged up -d
+	docker compose --env-file .env.merged up -d
 
 down:
-	docker-compose down
+	docker compose down
 
 restart:
-	docker-compose down && docker-compose --env-file .env up -d
+	docker compose down && docker compose --env-file .env up -d
 
 logs:
-	docker-compose logs -f
+	docker compose logs -f
