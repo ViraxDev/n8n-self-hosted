@@ -6,6 +6,10 @@ services:
       - "${N8N_PORT_LOCAL:-${N8N_PORT}}:5678"
     volumes:
       - n8n_data:/home/node/.n8n
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     restart: always
 
 volumes:

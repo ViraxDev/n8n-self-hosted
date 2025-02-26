@@ -1,4 +1,4 @@
-.env.local
-.env.merged
+/.env.local
+/.env.merged
 n8n_data/
 /.idea/
