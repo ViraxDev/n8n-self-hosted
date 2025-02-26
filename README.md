@@ -29,7 +29,7 @@ The project uses environment variables for configuration:
 ### Starting the Service
 
 ```bash
-  make up
+make up
 ```
 This command will:
 - Create a merged environment file (.env.merged) from .env and .env.local (if it exists)
@@ -38,37 +38,37 @@ This command will:
 ### Stopping the Service
 
 ```bash
-  make down
+make down
 ```
 
 ### Restarting the Service
 
 ```bash
-  make restart
+make restart
 ```
 
 ### Viewing Logs
 
 ```bash
-  make logs
+make logs
 ```
 
-### Customization
+## Customization
 
 You can customize the configuration by creating a `.env.local` file. Any settings in this file will override the defaults in `.env`.
 
 Example `.env.local`:
 
 ```bash
-  N8N_PORT_LOCAL=8080
+N8N_PORT_LOCAL=8080
 ```
 
-### Persistent Data
+## Persistent Data
 The setup uses a Docker volume (`n8n_data`) to persist your workflows and data between container restarts.
 
-### Security Considerations
+## Security Considerations
 
 Note that this setup has `N8N_SECURE_COOKIE=false`. In a production environment, you might want to adjust security settings based on your needs.
 
-### License
+## License
 This project is released under the terms of the LICENSE file included in the repository.
