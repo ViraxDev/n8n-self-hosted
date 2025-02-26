@@ -1,6 +1,7 @@
 .PHONY: up down restart logs
 
 up:
+	rm -f .env.merged
 	if [ -f .env.local ]; then \
 		cp .env .env.merged; \
 		cat .env.local >> .env.merged; \
